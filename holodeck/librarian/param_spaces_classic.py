@@ -1,4 +1,13 @@
 """'Classic' parameter spaces used in the NANOGrav 15yr analysis.
+
+15yr Astrophysics Analysis
+https://ui.adsabs.harvard.edu/abs/2023ApJ...952L..37A/abstract
+
+Notes
+-----
+[1] : The 15yr Astro paper quotes an initial separation (the `hard_sepa_init`) variable of "1e3 pc",
+      this is incorrect and the actual value used in the analysis was 1e4 pc.
+
 """
 
 from holodeck.constants import PC, GYR
@@ -280,7 +289,7 @@ class PS_Classic_GWOnly_Astro_Extended(_PS_Classic_GWOnly):
         return
 
 
-class PS_Test(_PS_Classic_Phenom):
+class PS_Classic_Test(_PS_Classic_Phenom):
     """Simple test parameter space in 2D.
     """
 
@@ -299,7 +308,7 @@ class PS_Test(_PS_Classic_Phenom):
 
 
 _param_spaces_dict = {
-    "PS_Test": PS_Test,
+    "PS_Classic_Test": PS_Classic_Test,
     "PS_Classic_Phenom_Uniform": PS_Classic_Phenom_Uniform,    # PS_Uniform_09B
     "PS_Classic_Phenom_Astro_Extended": PS_Classic_Phenom_Astro_Extended,
     "PS_Classic_GWOnly_Uniform": PS_Classic_GWOnly_Uniform,
